@@ -75,9 +75,9 @@ public class ContactListAdapter extends BaseAdapter implements Filterable {
 
                 for (int i = 0; i < modelContactsFiltered.size(); i++) {
                     if (modelContactsFiltered.get(i).getNumber()
-                            .equals(constraint.toString())
+                            .contains(constraint.toString())
                             || modelContactsFiltered.get(i).getName().toLowerCase()
-                            .equals(constraint.toString().toLowerCase())) {
+                            .contains(constraint.toString().toLowerCase())) {
 
                         filterContacts.add(modelContactsFiltered.get(i));
                     }
